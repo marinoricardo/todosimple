@@ -103,8 +103,9 @@ public class User {
             else if(!this.id.equals(other.id)){
                 return false;
             }
-            return Objects.equals(this.id, other.id) && Objects.equals(this.username, other.username) && Objects.equals(this.password, other.password);
+            
         }
+        return Objects.equals(this.id, other.id) && Objects.equals(this.username, other.username) && Objects.equals(this.password, other.password);
         // User user = (User) o;
         // return Objects.equals(id, user.id) && Objects.equals(username, user.username) && Objects.equals(password, user.password);
     }
