@@ -100,7 +100,7 @@ public class User {
             if(other.id != null){
                 return false;
             }
-            else if(!this.id.equals(.id)){
+            else if(!this.id.equals(other.id)){
                 return false;
             }
             return Objects.equals(this.id, other.id) && Objects.equals(this.username, other.username) && Objects.equals(this.password, other.password);
