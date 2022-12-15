@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import com.marinoricardo.todosimple.models.Task;
 import com.marinoricardo.todosimple.models.User;
 import com.marinoricardo.todosimple.repositories.TaskRepository;
-import com.marinoricardo.todosimple.repositories.UserRepository;
+// import com.marinoricardo.todosimple.repositories.UserRepository;
 
 import jakarta.transaction.Transactional;
 
