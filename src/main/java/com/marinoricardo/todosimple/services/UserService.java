@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.marinoricardo.todosimple.models.User;
-import com.marinoricardo.todosimple.repositories.TaskRepository;
+// import com.marinoricardo.todosimple.repositories.TaskRepository;
 import com.marinoricardo.todosimple.repositories.UserRepository;
 
 import jakarta.transaction.Transactional;
@@ -18,8 +18,8 @@ public class UserService {
     @Autowired
     private  UserRepository userRepository;
 
-    @Autowired
-    private TaskRepository taskRepository;
+    // @Autowired
+    // private TaskRepository taskRepository;
 
     public User findById(Long id){
         Optional<User> user = this.userRepository.findById(id);
@@ -34,7 +34,7 @@ public class UserService {
         obj.setId(null);
         obj = this.userRepository.save(obj);
         // salvar as tasks do user
-        this.taskRepository.saveAll(obj.getTasks());
+        // this.taskRepository.saveAll(obj.getTasks());
         return obj;
     }
 
