@@ -1,6 +1,7 @@
 package com.marinoricardo.todosimple.controllers;
 
 import java.net.URI;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -54,5 +55,11 @@ public class TaskController {
     public ResponseEntity<Void> delete(@PathVariable Long id){
         this.taskService.delete(id);
         return ResponseEntity.noContent().build();
+    }
+
+    @GetMapping("/user/{userId}")
+    public ResponseEntity<List<Task>> findAllByUserId(@PathVariable Long userId){
+        List<Task> tasks = this.taskService.findAllByUserId(userId);
+        return ResponseEntity.ok().body(tasks);
     }
 }
