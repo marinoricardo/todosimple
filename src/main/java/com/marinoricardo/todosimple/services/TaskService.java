@@ -22,7 +22,7 @@ public class TaskService {
     // private UserRepository userRepository;
     private UserService userService;
 
-    private Task findById(Long id){
+    public Task findById(Long id){
         Optional<Task> task = this.taskRepository.findById(id);
 
         return task.orElseThrow(() -> new RuntimeException(
